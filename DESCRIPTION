@@ -7,6 +7,8 @@ Version: 0.1.0
 Authors@R: c(person("Gabor", "Nyeki",
                     email = "gabor.nyeki@alumni.duke.edu",
                     role = c("aut", "cre")))
+Author: Gabor Nyeki [aut, cre]
+Maintainer: Gabor Nyeki <gabor.nyeki@alumni.duke.edu>
 URL: https://codeberg.org/gnyeki/jsonwriter
 BugReports: https://codeberg.org/gnyeki/jsonwriter/issues
 Remotes:
