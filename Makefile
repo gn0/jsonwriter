@@ -3,8 +3,13 @@
 document:
 	Rscript -e "devtools::document()"
 
-check:
+check: check-devtools check-as-cran
+
+check-devtools:
 	Rscript -e "devtools::check()"
+
+check-as-cran:
+	R CMD check --as-cran .
 
 build:
 	R CMD build .
