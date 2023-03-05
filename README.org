@@ -15,3 +15,42 @@ Open the R console and enter the following:
   devtools::install_git(url = "https://codeberg.org/gnyeki/jsonwriter/")
 #+END_SRC
 
+* Example
+
+#+BEGIN_SRC r
+  library(fixest)
+  library(jsonwriter)
+
+  data(quakes)
+
+  write_json(
+      feols(depth ~ mag, quakes),
+      "jsonwriter_example.json")
+#+END_SRC
+
+This writes the following JSON object to =jsonwriter_example.json=:
+
+#+BEGIN_SRC js
+  {
+    "call": "feols(fml = depth ~ mag, data = quakes)",
+    "r_squared": 0.05319375,
+    "coef": {
+      "(Intercept)": {
+        "est": 881.62502357,
+        "se": 76.4443861,
+        "t": 11.53289429,
+        "p": 5.63241902e-29,
+        "stars": "***"
+      },
+      "mag": {
+        "est": -123.42092104,
+        "se": 16.48252628,
+        "t": -7.4879857,
+        "p": 1.53539289e-13,
+        "stars": "***"
+      }
+    },
+    "nobs": 1000
+  }
+#+END_SRC
+
