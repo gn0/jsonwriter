@@ -4,15 +4,13 @@
 \alias{write_json}
 \title{Write regression results to a JSON file.}
 \usage{
-write_json(model, output_filename, verbose = FALSE, ...)
+write_json(model, output_filename, ...)
 }
 \arguments{
 \item{model}{Object that contains the regression results.  Currently
 only \code{fixest} is supported.}
 
 \item{output_filename}{Filename to write the JSON output to.}
-
-\item{verbose}{Flag to indicate whether to write console messages.}
 
 \item{...}{Additional arguments passed on to the method.}
 }
