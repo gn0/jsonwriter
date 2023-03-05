@@ -1,0 +1,4 @@
+#+TITLE: jsonwriter: R library to write regression results to JSON files
+#+DATE: [2023-03-05 Sun]
+
+

@@ -1,0 +1,26 @@
+Type: Package
+Package: jsonwriter
+Title: Write regression results to JSON files
+Description: Write regression results from the `fixest` library to JSON
+    files.
+Version: 0.1.0
+Authors@R: c(person("Gabor", "Nyeki",
+                    email = "gnyeki@princeton.edu",
+                    role = c("aut", "cre")))
+URL: https://codeberg.org/gnyeki/jsonwriter
+BugReports: https://codeberg.org/gnyeki/jsonwriter/issues
+Remotes:
+Depends:
+    R (>= 4.2.0)
+Imports:
+    jsonlite (>= 1.8.0),
+    dplyr (>= 1.0.9)
+Suggests:
+    fixest
+License: GPL-3
+Encoding: UTF-8
+LazyData: false
+Roxygen: list(markdown = TRUE)
+Language: en-US
+RoxygenNote: 7.1.2
+Collate: 'jsonwriter.R'
