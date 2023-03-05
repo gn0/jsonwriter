@@ -25,7 +25,8 @@ Open the R console and enter the following:
 
   write_json(
       feols(depth ~ mag, quakes),
-      "jsonwriter_example.json")
+      "jsonwriter_example.json",
+      extra_fields = list(hello = "world"))
 #+END_SRC
 
 This writes the following JSON object to =jsonwriter_example.json=:
@@ -50,7 +51,8 @@ This writes the following JSON object to =jsonwriter_example.json=:
         "stars": "***"
       }
     },
-    "nobs": 1000
+    "nobs": 1000,
+    "hello": "world"
   }
 #+END_SRC
 
