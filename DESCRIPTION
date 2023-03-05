@@ -5,7 +5,7 @@ Description: Write regression results from the `fixest` library to JSON
     files.
 Version: 0.1.0
 Authors@R: c(person("Gabor", "Nyeki",
-                    email = "gnyeki@princeton.edu",
+                    email = "gabor.nyeki@alumni.duke.edu",
                     role = c("aut", "cre")))
 URL: https://codeberg.org/gnyeki/jsonwriter
 BugReports: https://codeberg.org/gnyeki/jsonwriter/issues
