@@ -1,4 +1,17 @@
 #+TITLE: jsonwriter: R library to write regression results to JSON files
 #+DATE: [2023-03-05 Sun]
 
+* Description
+
+=jsonwriter= is an R library for writing regression results to JSON files.
+Currently only supports =fixest=.
+
+* How to install
+
+Open the R console and enter the following:
+
+#+BEGIN_SRC r
+  install.packages("devtools")
+  devtools::install_git(url = "https://codeberg.org/gnyeki/jsonwriter/")
+#+END_SRC
 
