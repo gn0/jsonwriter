@@ -6,6 +6,9 @@ document:
 check:
 	Rscript -e "devtools::check()"
 
+build:
+	R CMD build .
+
 install:
 	Rscript -e "devtools::install()"
 
