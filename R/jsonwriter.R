@@ -13,11 +13,13 @@ call_to_string <- function(call) {
 #'
 #' @param model Object that contains the regression results.  Currently
 #'              only `fixest` is supported.
-#' @param output_filename
+#' @param output_filename Filename to write the JSON output to.
+#' @param verbose Flag to indicate whether to write console messages.
+#' @param ... Additional arguments passed on to the method.
 #'
 #' @return Nothing.
 #' @export
-write_json <- function(model, output_filename, ...) {
+write_json <- function(model, output_filename, verbose = FALSE, ...) {
     UseMethod("write_json")
 }
 
@@ -25,9 +27,7 @@ write_json <- function(model, output_filename, ...) {
 write_json.default <- function(model, output_filename, ...) NULL
 
 #' @export
-write_json.fixest <- function(model,
-                              output_filename,
-                              verbose = FALSE) {
+write_json.fixest <- function(model, output_filename, verbose, ...) {
     output_object <- list(
         call      = call_to_string(model$call),
         r_squared = 1 - model$ssr / model$ssr_null,
