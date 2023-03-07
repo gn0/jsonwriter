@@ -4,13 +4,19 @@
 \alias{write_json}
 \title{Write regression results to a JSON file.}
 \usage{
-write_json(model, output_filename, ...)
+write_json(model, output_filename, verbose = FALSE, extra_fields = NULL, ...)
 }
 \arguments{
 \item{model}{Object that contains the regression results.  Currently
 only \code{fixest} is supported.}
 
 \item{output_filename}{Filename to write the JSON output to.}
+
+\item{verbose}{Flag to indicate whether to write console messages.
+(Optional.)}
+
+\item{extra_fields}{A \code{list} object with extra information to add to
+the output.  (Optional.)}
 
 \item{...}{Additional arguments passed on to the method.}
 }
@@ -19,4 +25,14 @@ Nothing.
 }
 \description{
 Write regression results to a JSON file.
+}
+\examples{
+\dontrun{library(fixest)
+data(quakes)
+
+write_json(
+    feols(depth ~ mag, quakes),
+    "jsonwriter_example.json",
+    extra_fields = list(hello = "world"))
+}
 }
