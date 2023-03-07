@@ -14,24 +14,48 @@ call_to_string <- function(call) {
 #' @param model Object that contains the regression results.  Currently
 #'              only `fixest` is supported.
 #' @param output_filename Filename to write the JSON output to.
+#' @param verbose Flag to indicate whether to write console messages.
+#'                (Optional.)
+#' @param extra_fields A `list` object with extra information to add to
+#'                     the output.  (Optional.)
 #' @param ... Additional arguments passed on to the method.
 #'
 #' @return Nothing.
+#' @examples
+#' \dontrun{library(fixest)
+#' data(quakes)
+#'
+#' write_json(
+#'     feols(depth ~ mag, quakes),
+#'     "jsonwriter_example.json",
+#'     extra_fields = list(hello = "world"))
+#' }
 #' @export
-write_json <- function(model, output_filename, ...) {
+write_json <- function(model,
+                       output_filename,
+                       verbose = FALSE,
+                       extra_fields = NULL,
+                       ...) {
     UseMethod("write_json")
 }
 
 #' @export
-write_json.default <- function(model, output_filename, ...) NULL
+write_json.default <- function(model,
+                               output_filename,
+                               verbose = FALSE,
+                               extra_fields = NULL,
+                               ...) {
+    NULL
+}
 
 #' Write a `fixest` object to a JSON file.
 #'
 #' @param model A `fixest` object that contains the regression results.
 #' @param output_filename Filename to write the JSON output to.
 #' @param verbose Flag to indicate whether to write console messages.
+#'                (Optional.)
 #' @param extra_fields A `list` object with extra information to add to
-#'                     the output.
+#'                     the output.  (Optional.)
 #' @param ... Additional arguments.  Ignored.
 #' @export
 write_json.fixest <- function(model,
