@@ -8,8 +8,10 @@ check: check-devtools check-as-cran
 check-devtools:
 	Rscript -e "devtools::check()"
 
-check-as-cran:
-	R CMD check --as-cran .
+check-as-cran: build
+	$(eval pkg_version := \
+		$(shell cat DESCRIPTION | grep '^Version:' | cut -d' ' -f2))
+	R CMD check --as-cran "jsonwriter_$(pkg_version).tar.gz"
 
 build:
 	R CMD build .
