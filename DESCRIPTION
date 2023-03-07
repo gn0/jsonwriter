@@ -1,6 +1,6 @@
 Type: Package
 Package: jsonwriter
-Title: Write regression results to JSON files
+Title: Write Regression Results to JSON Files
 Description: Write regression results from the `fixest` library to JSON
     files.
 Version: 0.1.1
