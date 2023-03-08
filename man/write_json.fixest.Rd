@@ -2,22 +2,23 @@
 % Please edit documentation in R/jsonwriter.R
 \name{write_json.fixest}
 \alias{write_json.fixest}
-\title{Write a \code{fixest} object to a JSON file.}
+\title{Write a 'fixest' object to a JSON file.}
 \usage{
 \method{write_json}{fixest}(model, output_filename, verbose = FALSE, extra_fields = NULL, ...)
 }
 \arguments{
-\item{model}{A \code{fixest} object that contains the regression results.}
+\item{model}{A 'fixest' object that contains the regression results.}
 
 \item{output_filename}{Filename to write the JSON output to.}
 
-\item{verbose}{Flag to indicate whether to write console messages.}
+\item{verbose}{Flag to indicate whether to write console messages.
+(Optional.)}
 
-\item{extra_fields}{A \code{list} object with extra information to add to
-the output.}
+\item{extra_fields}{A 'list' object with extra information to add to
+the output.  (Optional.)}
 
 \item{...}{Additional arguments.  Ignored.}
 }
 \description{
-Write a \code{fixest} object to a JSON file.
+Write a 'fixest' object to a JSON file.
 }
