@@ -3,7 +3,7 @@ Package: jsonwriter
 Title: Write Regression Results to JSON Files
 Description: Write regression results from the `fixest` library to JSON
     files.
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(person("Gabor", "Nyeki",
                     email = "gabor.nyeki@alumni.duke.edu",
                     role = c("aut", "cre")))
@@ -23,5 +23,5 @@ Encoding: UTF-8
 LazyData: false
 Roxygen: list(markdown = TRUE)
 Language: en-US
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Collate: 'jsonwriter.R'
