@@ -21,13 +21,17 @@ the output.  (Optional.)}
 \item{...}{Additional arguments passed on to the method.}
 }
 \value{
-Nothing.
+\value{No return value, called for side effects.}
 }
 \description{
 Write regression results to a JSON file.
 }
 \examples{
-\dontrun{library(fixest)
+\dontrun{# The following example fits a regression on the built-in
+# 'quakes' data set and writes the results to a file called
+# "jsonwriter_example.json" in the current working directory.
+#
+library(fixest)
 data(quakes)
 
 write_json(

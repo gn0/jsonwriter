@@ -4,7 +4,14 @@
 \alias{write_json.fixest}
 \title{Write a 'fixest' object to a JSON file.}
 \usage{
-\method{write_json}{fixest}(model, output_filename, verbose = FALSE, extra_fields = NULL, ...)
+\method{write_json}{fixest}(
+  model,
+  output_filename,
+  verbose = FALSE,
+  extra_fields = NULL,
+  vcov = NULL,
+  ...
+)
 }
 \arguments{
 \item{model}{A 'fixest' object that contains the regression results.}
@@ -17,7 +24,13 @@
 \item{extra_fields}{A 'list' object with extra information to add to
 the output.  (Optional.)}
 
+\item{vcov}{Standard error specification to pass to
+'fixest::coeftable'.  (Optional.)}
+
 \item{...}{Additional arguments.  Ignored.}
+}
+\value{
+\value{No return value, called for side effects.}
 }
 \description{
 Write a 'fixest' object to a JSON file.
